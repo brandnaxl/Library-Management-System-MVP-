@@ -1,0 +1,36 @@
+CREATE DATABASE Library;
+USE Library;
+
+CREATE TABLE `user` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `username` VARCHAR(255) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `role` VARCHAR(50) NOT NULL
+);
+
+INSERT INTO `user` (`username`, `password`, `role`) VALUES
+    ('staff', 'staff', 'staff'),
+    ('customer', 'customer', 'customer');
+
+CREATE TABLE `buku` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `judul` VARCHAR(255) NOT NULL,
+    `stok` INT NOT NULL
+);
+
+INSERT INTO `buku` (`judul`, `stok`) VALUES
+    ('Naruto', 10),
+    ('Boruto', 15),
+    ('Ayah', 20),
+    ('Uzumaki', 8),
+    ('Dilan 1990', 5),
+    ('Dilan: Dia Adalah Dilanku Tahun 1990', 12),
+    ('Dilan Bagian Kedua: Dia Adalah Dilanku Tahun 1991', 7),
+    ('Milea: Suara Dari Dilan', 18),
+    ('Ancika: Dia yang Bersamaku Tahun 1995', 9),
+    ('Tentang Kamu', 14),
+    ('Bumi', 25),
+    ('Hujan', 11),
+    ('Pulang-Pergi', 6),
+    ('Janji', 13),
+    ('Rembulan Tenggelam di Wajahmu', 16);
